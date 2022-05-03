@@ -16,7 +16,6 @@ var favid =0;
 // fetching the data
 search.onkeyup = function () {
   var searchname = search.value;
-console.log(searchname + "aaaa");
   if (searchname !== "") {
     fetch(
       "https://superheroapi.com/api.php/ 3328323083897178/search/" +
@@ -25,7 +24,6 @@ console.log(searchname + "aaaa");
       .then((response) => response.json())
       .then((data) => {
         console.log(data);
-        // console.log("your heroes", hero);
         function showhero() {
           var heronames = data.results;
           console.log(data.results);
@@ -41,20 +39,18 @@ console.log(searchname + "aaaa");
               loadDetails(heroid);
               ul.innerText = " ";
             });
-            //  li.innerHTML = hero.push[data]; // assigning text to li using array value.
             li.setAttribute("style", "display: block;"); // remove the bullets.
-            ul.appendChild(li); // append li to ul.
-            // li.addEventListener(onclick,loadDetails(heronames));
+            ul.appendChild(li); // append li to ul
           }
         }
 
         showhero();
-        // clearList();
       })
       .catch((err) => console.log(err));
   }
 };
 
+// displaying the hero details on screen 
 function loadDetails(heroid) {
   fetch(`https://superheroapi.com/api.php/ 3328323083897178/${heroid}`)
     .then((response) => response.json())
@@ -103,6 +99,7 @@ function loadDetails(heroid) {
     .catch((error) => console.log(error));
 }
 
+// pushing data to favarray and setting it into localstorage.
 function favpush (favid){ 
   console.log(favid);
   if (favarray.includes(favid)) {
