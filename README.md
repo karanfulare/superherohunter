@@ -5,7 +5,7 @@ hosted link:-
 
 ## Here in this app you can search your desired superheroes and villians , you can add them to favourites list also.
 
-### used the superhero api for json data
+## I Have used the [superhero api](https://superheroapi.com/) for json data 
 
 ### I have used Javascript here with these methods named below 
 
